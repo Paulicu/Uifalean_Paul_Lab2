@@ -10,6 +10,14 @@ namespace Uifalean_Paul_Lab2.Models
         public string? LastName { get; set; }
 
         [Display(Name = "Full Name")]
-        public string FullName => FirstName + " " + LastName;
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
+
+        public ICollection<Book>? Books { get; set; }
     }
 }
